@@ -1,4 +1,4 @@
 */*/node_modules/
 !projects/*/*.*
-!projects/*/src/
+!projects/*/src
 .vscode
