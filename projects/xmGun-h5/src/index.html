@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title></title>
+
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+    <script src="js/lib/fastclick.js"></script>
+    <script>
+        if ('addEventListener' in document) {
+            document.addEventListener('DOMContentLoaded', function() {
+                FastClick.attach(document.body);
+            }, false);
+        }
+    </script>
+    <script src="js/lib/jquery-1.8.3.min.js"></script>
+    <script src="js/lib/resLoader.js"></script>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="loading" class="page show">
+            <div class="text">
+                <img src="images/title_loading.png" />
+            </div>
+            <div class="icons">
+                <span id="icon1"></span>
+                <span id="icon2"></span>
+                <span id="icon3"></span>
+            </div>
+            <div class="pic">
+                <img src="images/p_loading_r.png" />
+                <p class="loading-progress">1%</p>
+            </div>
+        </div>
+        <div id="page-1" class="page">
+            <a href="javascript:;" class="btn-start pressEffectBtn">
+                <img src="images/btn-start.png" />
+            </a>
+        </div>
+        <div id="page-2" class="page">
+            <div class="mask">
+                <div class="tip">
+                    <img src="images/p_tip_1.png" />
+                </div>
+                <div class="tipicon">
+                    <img src="images/icon-wen.png" class="tw" />
+                </div>
+                <div class="tipicon tw-s">
+                    <img src="images/icon-wen-shadow.png" class="tw-s" />
+                </div>
+            </div>
+        </div>
+        <div id="page-3" class="page">
+            <div class="icon-z"></div>
+            <div class="icon-y"></div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/choice/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/choice/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/choice/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/choice/4.png" />
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="action-swiper">
+                <a href="javascript:;" class="btn btn-confirm pressEffectBtn"><img src="images/btn-confirm.png"></a>
+                <a href="javascript:;" class="btn btn-next pressEffectBtn"><img src="images/btn-next.png"></a>
+            </div>
+        </div>
+        <div id="page-4" class="page">
+            <div class="title">
+                <span><img src="" /></span>
+            </div>
+            <div class="detail">
+                <img src="" />
+            </div>
+            <a href="javascript:;" class="btn-fenxi pressEffectBtn">
+                <img src="images/btn-fenxi.png" />
+            </a>
+        </div>
+        <div id="page-5" class="page">
+            <div class="fenxi">
+                <img src="" />
+                <a href="javascript:;" class="btn-share pressEffectBtn"><img src="images/btn-share.png" /></a>
+            </div>
+            <div class="action-result">
+                <a href="javascript:;" class="btn btn-again pressEffectBtn"><img src="images/btn-again.png"></a>
+                <a href="javascript:;" id="down-link" class="btn btn-kaihei pressEffectBtn"><img src="images/btn-kaihei.png"></a>
+            </div>
+            <div class="shareTip">
+                <div><img src="images/shareTip.png" /></div>
+            </div>
+        </div>
+    </div>
+    <div id="waiting" class="waiting">
+        <div class="loading-center-absolute">
+            <div id="preloader_1">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div id="mask"></div>
+
+    <div id="bg">
+        <audio id="music" loop autoplay>
+            <source src="images/assets/Sioen-Cruisin'27s.mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 元素。
+        </audio>
+    </div>
+
+    <script src="js/lib/swiper.jquery.min.js"></script>
+    <script src="js/page.js"></script>
+</body>
+
+</html>

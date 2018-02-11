@@ -1,0 +1,564 @@
+﻿html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    z-index: 10
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+#mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: #fff;
+    display: none;
+}
+
+.page.show {
+    display: block;
+}
+
+#loading {
+    background: #ccc;
+    z-index: 1000;
+}
+
+#waiting {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    background: rgba(0, 0, 0, 1);
+    z-index: 2000;
+}
+
+.loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 100px;
+    margin-top: -20px;
+    margin-left: -50px;
+    text-align: center;
+}
+
+.loading-center-absolute .icons .icon-obj {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin: 0 5px;
+    background: #000;
+    border-radius: 50%;
+}
+
+.waiting .object {
+    position: static;
+    float: left;
+    margin: 0;
+}
+
+#preloader_1 {
+    position: relative;
+    margin: 0 auto;
+}
+
+#preloader_1 span {
+    display: block;
+    bottom: 0px;
+    width: 9px;
+    height: 5px;
+    background: #9b59b6;
+    position: absolute;
+    -webkit-animation: preloader_1 1.5s infinite ease-in-out;
+    -moz-animation: preloader_1 1.5s infinite ease-in-out;
+    -ms-animation: preloader_1 1.5s infinite ease-in-out;
+    -o-animation: preloader_1 1.5s infinite ease-in-out;
+    animation: preloader_1 1.5s infinite ease-in-out;
+}
+
+#preloader_1 span:nth-child(2) {
+    left: 11px;
+    -webkit-animation-delay: .2s;
+    -moz-animation-delay: .2s;
+    -ms-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+#preloader_1 span:nth-child(3) {
+    left: 22px;
+    -webkit-animation-delay: .4s;
+    -moz-animation-delay: .4s;
+    -ms-animation-delay: .4s;
+    -o-animation-delay: .4s;
+    animation-delay: .4s;
+}
+
+#preloader_1 span:nth-child(4) {
+    left: 33px;
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s;
+    -ms-animation-delay: .6s;
+    -o-animation-delay: .6s;
+    animation-delay: .6s;
+}
+
+#preloader_1 span:nth-child(5) {
+    left: 44px;
+    -webkit-animation-delay: .8s;
+    -moz-animation-delay: .8s;
+    -ms-animation-delay: .8s;
+    -o-animation-delay: .8s;
+    animation-delay: .8s;
+}
+
+
+/**/
+
+#loading {
+    z-index: 1000;
+}
+
+#waiting {
+    z-index: 1000;
+}
+
+#page-1 {
+    z-index: 500;
+}
+
+#page-2 {
+    z-index: 400;
+}
+
+#page-3 {
+    z-index: 300;
+}
+
+
+/**/
+
+#loading {
+    background: url("../images/bg_loading.png") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#loading .text {
+    position: absolute;
+    width: 26vw;
+    max-width: 180px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 16vh;
+    text-align: center;
+}
+
+#loading .icons {
+    position: absolute;
+    width: 25vw;
+    max-width: 130px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 22vh;
+    text-align: center;
+    font-size: 0;
+}
+
+#loading .icons span {
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    background: url("../images/p_loading_icon_1.png") no-repeat center;
+    background-size: 100% 100%;
+    margin: 0 5px;
+    position: relative;
+    top: 0;
+}
+
+#loading .pic {
+    position: absolute;
+    width: 50vw;
+    max-width: 370px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 37vh;
+    text-align: center;
+}
+
+#loading #icon1 {
+    animation-name: loading-dot;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: loading-dot;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+#loading #icon2 {
+    animation-name: loading-dot;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-delay: .3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: loading-dot;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: .3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+#loading #icon3 {
+    animation-name: loading-dot;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-delay: .6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+    /* Safari 与 Chrome: */
+    -webkit-animation-name: loading-dot;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: .6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: running;
+}
+
+#loading .loading-progress {
+    color: #fff;
+}
+
+
+/**/
+
+#page-1 {
+    background: url("../images/p_1.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#page-1 .btn-start {
+    position: absolute;
+    width: 81%;
+    max-width: 610px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 5vh;
+}
+
+
+/**/
+
+#page-2 {
+    background: url("../images/p_2.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#page-2 .mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(7, 18, 87, 0.85);
+    display: none;
+}
+
+#page-2 .mask .tip {
+    position: absolute;
+    width: 70vw;
+    max-width: 550px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 28vh;
+}
+
+#page-2 .mask .tipicon {
+    position: absolute;
+    width: 20vw;
+    max-width: 225px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50vh;
+}
+
+#page-2 .mask .tipicon img {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#page-2 .mask .tipicon .tw {
+    opacity: 1;
+}
+
+#page-2 .mask .tipicon .tw-s {
+    opacity: .3;
+    -webkit-animation: breth 1s infinite linear reverse;
+    -moz-animation: breth 1s infinite linear reverse;
+    -ms-animation: breth 1s infinite linear reverse;
+    -o-animation: breth 1s infinite linear reverse;
+    animation: breth 1s infinite linear reverse;
+}
+
+
+/**/
+
+#page-3 {
+    background: url("../images/bg_p3.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#page-3 .swiper-container {
+    margin-top: 6vh;
+}
+
+.swiper-container .swiper-slide {
+    width: 90vw;
+    height: 70vh;
+    overflow: hidden;
+    opacity: .5;
+}
+
+.swiper-container .swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-container .swiper-slide img {
+    width: 100%;
+    height: 70vh;
+}
+
+.swiper-pagination {
+    width: 100%;
+    position: static;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.swiper-pagination span {
+    margin: 0 5px;
+}
+
+.action-swiper {
+    text-align: center;
+    font-size: 0;
+    padding: 10px 0;
+}
+
+.action-swiper a {
+    display: inline-block;
+    width: 44vw;
+}
+
+#page-3 .icon-z {
+    width: 30px;
+    height: 26px;
+    background: url("../images/icon-z.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 5vw;
+    top: 53vh;
+    z-index: 100;
+}
+
+#page-3 .icon-y {
+    width: 40px;
+    height: 44px;
+    background: url("../images/icon-yuan.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 15vw;
+    top: 69vh;
+    z-index: 100;
+}
+
+
+/**/
+
+#page-4 {
+    background: url("../images/bg_p4.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#page-4 .title {
+    width: 90vw;
+    height: 16vh;
+    background: url("../images/p_5_titlebar.png") no-repeat center bottom;
+    background-size: 100% auto;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+#page-4 .title span {
+    position: absolute;
+    width: 65vw;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 4vh;
+}
+
+#page-4 .detail {
+    width: 85vw;
+    /* height: 70vh; */
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+    top: -2.5vw;
+}
+
+#page-4 .btn-fenxi {
+    display: block;
+    /* width: 94vw; */
+    margin: 0 auto;
+    position: relative;
+    top: -15vw;
+    z-index: 10;
+}
+
+
+/**/
+
+#page-5 {
+    background: url("../images/bg_p5.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+
+#page-5 .fenxi {
+    width: 88vw;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+}
+
+#page-5 .fenxi .btn-share {
+    position: absolute;
+    width: 65vw;
+    bottom: 9vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#page-5 .action-result {
+    font-size: 0;
+    text-align: center;
+    /* margin-top: 3vh; */
+}
+
+#page-5 .action-result .btn {
+    display: inline-block;
+    width: 48vw;
+}
+
+.shareTip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background: rgba(7, 18, 87, 0.85);
+    display: none;
+}
+
+.shareTip div {
+    width: 80vw;
+    float: right;
+}
+
+
+/**/
+
+#bg {
+    width: 30px;
+    height: 30px;
+    background: url("../images/assets/music-run.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 900;
+    -webkit-animation: musicRoll 5s infinite linear;
+    -moz-animation: musicRoll 5s infinite linear;
+    -ms-animation: musicRoll 5s infinite linear;
+    -o-animation: musicRoll 5s infinite linear;
+    animation: musicRoll 5s infinite linear;
+}
+
+#bg.stop {
+    background: url("../images/assets/music-stop.png") no-repeat center;
+    background-size: 100% 100%;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
+    animation: none;
+}
+
+#music {
+    display: none;
+}
